@@ -5,9 +5,11 @@ public class Country {
     String countryName;
     String countryCapital;
 
-    public Country(int i, String india, String delhi) {
-    }
-
+public Country (int id, String countryName, String countryCapital) {
+    this.id = id;
+    this.countryName = countryName;
+    this.countryCapital = countryCapital;
+}
 
     public int getId() {
         return id;

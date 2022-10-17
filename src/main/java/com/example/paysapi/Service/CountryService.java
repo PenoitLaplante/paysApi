@@ -2,11 +2,13 @@ package com.example.paysapi.Service;
 
 import com.example.paysapi.Controllers.AddResponse;
 import com.example.paysapi.Model.Country;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+// @Component
 public class CountryService {
     static HashMap<Integer, Country> countryIdMap;
 
@@ -15,8 +17,8 @@ public class CountryService {
         countryIdMap=new HashMap<Integer, Country>();
 
         Country indiaCountry=new Country(1, "India", "Delhi");
-        Country usaCountry=new Country(1, "USA", "Washington");
-        Country ukCountry=new Country(1, "Uk", "London");
+        Country usaCountry=new Country(2, "USA", "Washington");
+        Country ukCountry=new Country(3, "Uk", "London");
 
         countryIdMap.put(1, indiaCountry);
         countryIdMap.put(2, usaCountry);
