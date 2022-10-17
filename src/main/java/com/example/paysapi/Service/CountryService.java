@@ -1,5 +1,6 @@
 package com.example.paysapi.Service;
 
+import com.example.paysapi.Controllers.AddResponse;
 import com.example.paysapi.Model.Country;
 
 import java.util.ArrayList;
@@ -53,5 +54,16 @@ public class CountryService {
                 max=id;
         return max+1;
     }
-
+    public Country updateCountry(Country country){
+        if(country.getId()>0)
+                countryIdMap.put(country.getId(), country);
+        return country;
+    }
+    public AddResponse deleteCountry(int id){
+        countryIdMap.remove(id);
+        AddResponse res=new AddResponse();
+        res.setMsg("Country Deleted");
+        res.setId(id);
+        return res;
+    }
 }
